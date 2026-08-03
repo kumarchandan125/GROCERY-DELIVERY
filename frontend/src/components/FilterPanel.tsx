@@ -52,7 +52,7 @@ const FilterPanel = ({
           />
         </div>
       </div>
-
+      {/* Clear Filters */}
       {hasFilters && (
         <button
           onClick={clearFilters}
