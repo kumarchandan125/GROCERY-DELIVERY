@@ -143,7 +143,7 @@ const Navbar = () => {
                         </Link>
                       )}
                       {user && (
-                        <Link to="/login" className="dropdown-link">
+                        <Link to="/orders" className="dropdown-link">
                           <UserIcon size={16} />
                           My Orders
                         </Link>
