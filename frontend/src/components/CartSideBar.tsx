@@ -24,7 +24,10 @@ const CartSideBar = () => {
 
   if (!isCartOpen) return null;
 
-  const deliveryFee = cartTotal > 20 ? 0 : 5.0;
+  const deliveryFee =
+    cartTotal >= 499 || items.some((item) => item.product.price >= 499)
+      ? 0
+      : 50;
   const grandTotal = cartTotal + deliveryFee;
   return (
     <>
@@ -141,7 +144,7 @@ const CartSideBar = () => {
                 {deliveryFee === 0 ? (
                   <span>Free</span>
                 ) : (
-                  `₹{currency}₹{deliveryFee.toFixed(2)}`
+                  `${currency}${deliveryFee.toFixed(2)}`
                 )}
               </span>
             </div>
