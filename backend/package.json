@@ -2,12 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "postinstall": "npx prisma generate",
     "start": "tsx server.ts",
     "server": "nodemon --exec tsx server.ts",
-    "build": "tsc"
+    "build": "npx prisma generate && tsc"
   },
   "keywords": [],
   "author": "",
@@ -38,6 +38,6 @@
     "prisma": "^7.9.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.8",
-    "typescript": "^7.0.2"
+    "typescript": "^5.9.2"
   }
 }
